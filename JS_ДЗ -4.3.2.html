@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		'use strict'
+		let age = prompt('Введите ваш возрост');
+		switch (true) {
+			case (age > 18):
+				alert(`Здравствуйте, мне ${age} лет`);
+				console.log(`Здравствуйте, мне ${age} лет`);
+				break;
+			case (age <= 0):
+				alert('Неверно указан возраст');
+				console.log('Неверно указан возраст');
+				break;
+			case (age < 18):
+				alert(`Привет мне, мне ${age} лет `);
+				console.log(`Привет мне, мне ${age} лет `);
+				break;
+
+			default:
+				alert('Неверно указан возраст');
+				console.log('Неверно указан возраст');
+				break;
+		}
+
+	</script>
+</body>
+
+</html>
