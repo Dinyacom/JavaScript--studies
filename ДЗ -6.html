@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		'use strict'
+		const fisrtArr = [1, 2, 3, 5, -10, 6, 90, 23, -8];
+		console.log(`fisrtArr`, (fisrtArr))
+		const secondArr = [1, -2, 50, 9, 8, 15, 2];
+		console.log(`secondArr`, (secondArr))
+		const thirdArr = [1, 2, 3, 5, 19, 76, -67, 78];
+		console.log(`thirdArr`, (thirdArr))
+
+		function sumloc(funct) {
+			let sum = 0;
+			for (let i = 0; i < funct.length; i++) {
+				if (funct[i] > 0 && funct[i] % 2 === 0) {
+					sum += funct[i];
+				}
+			}
+			return sum;
+		}
+		let sum1 = (sumloc(fisrtArr));
+		alert(`Сумма положительных чётных значений по массиву fisrtArr составляет: ${sum1}`);
+		console.log(`Сумма положительных чётных значений по массиву fisrtArr составляет: ${sum1}`)
+
+		sumloc(secondArr);
+		let sum2 = (sumloc(secondArr));
+		alert(`Сумма положительных чётных значений по массиву secondArr составляет: ${sum2}`);
+		console.log(`Сумма положительных чётных значений по массиву secondArr составляет: ${sum2}`)
+
+		sumloc(thirdArr);
+		let sum3 = (sumloc(thirdArr));
+		alert(`Сумма положительных чётных значений по массиву thirdArr составляет: ${sum3}`);
+		console.log(`Сумма положительных чётных значений по массиву thirdArr составляет: ${sum3}`)
+
+		let sumsum = (sum1 + sum2 + sum3);
+		alert(`Общая сумма положительных чётных значений по всем массивам составляет: ${sumsum}`)
+		console.log(`Общая сумма положительных чётных значений по всем массивам составляет: ${sumsum}`)
+
+	</script>
+</body>
+
+</html>
