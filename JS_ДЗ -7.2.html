@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		'use strict'
+		const arr1 = [1, 2, 3, 4, 5, -10, 6, 90, 23, -8];
+		const arr2 = [1, -2, 50, 9, -8, 15, 2];
+		const arr3 = [1, 2, 3, 5, 19, -76, -67, 78];
+		let getNewArrFromGroup = (...arr) => {
+			let artnov = [];
+			for (let i = 0; i < arr.length; i++) {
+				artnov = [...artnov, ...arr[i]];
+			}
+
+			let artnovResult = [];
+			for (let j of artnov) {
+				if (j < 0 && j % 2 === 0) {
+					artnovResult.push(j);
+				}
+			}
+			artnovResult.shift();
+			artnovResult.pop();
+			return artnovResult
+		}
+		console.log(`Исходный массив arr1 : `);
+		console.log(arr1);
+		console.log(`Исходный массив arr2 : `);
+		console.log(arr2);
+		console.log(`Исходный массив arr3 : `);
+		console.log(arr3);
+		console.log(`Новый массив где объединеняются исходные массивы так же там все элементы отрицательные и четные. В полученном массиве удалён первый и последний элемент : `);
+		let newArrFromGroup = getNewArrFromGroup(arr1, arr2, arr3);
+		console.log(newArrFromGroup);
+	</script>
+</body>
+
+</html>
