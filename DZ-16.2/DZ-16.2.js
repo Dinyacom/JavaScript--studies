@@ -17,8 +17,9 @@ function cleanRoom(dirtyLevel) {
 				resolve(dirtyLevel), dirtyLevel * 1000)
 		}
 		)
-			.then(result =>
-				console.log(`Уборка проведена успешно за ${result} секунд`));
 	}
 }
 cleanRoom(2)
+	.then(result =>
+		console.log(`Уборка проведена успешно за ${result} секунд`)
+	);
